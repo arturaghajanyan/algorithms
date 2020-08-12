@@ -20,7 +20,7 @@ int binarySearch(int array[], int l, int sizeofArray, int elementForSearching) {
 }
   
 int main(void) {
-    int array[] = { 2, 3, 4, 10, 40 };
+    int array[] = { 2, 3, 4, 1, 12, 7, 10, 40 };
     int elementForSearching = 10;
     int sizeofArray = sizeof(array) / sizeof(array[0]);
     int result = binarySearch(array, 0, sizeofArray - 1, elementForSearching);
