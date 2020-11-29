@@ -1,14 +1,17 @@
-#include <iostream> 
-using namespace std; 
+#include <iostream>
+using namespace std;
 
 struct Node {
     int data;
     Node* left, * right;
 };
 
-
 Node* newNode(int data) {
     Node* node = new Node();
+    if (!node) {
+        cout << "Memory error\n";
+        return NULL;
+    }
     node->data = data;
     node->left = node->right = NULL;
     return (node);
@@ -18,9 +21,9 @@ Node* insertBinaryTree(int array[], Node* root, int i, int arraySize) {
     if (i < arraySize) {
         Node* temp = newNode(array[i]);
         root = temp;
-  
+
         root->left = insertBinaryTree(array,root->left, 2 * i + 1, arraySize);
-  
+
         root->right = insertBinaryTree(array, root->right, 2 * i + 2, arraySize);
     }
     return root;

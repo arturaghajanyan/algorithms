@@ -1,18 +1,18 @@
 #include <iostream>
 using namespace std;
   
-void swap(int *valueRight, int *valueLeft){
+void swap(int *valueRight, int *valueLeft) {
     int temp = *valueRight;
     *valueRight = *valueLeft;
     *valueLeft = temp;
 }  
   
-void selectionSort(int array[], int sizeofArray){
+void selectionSort(int array[], int sizeofArray) {
     int minimum_index;
     for (int i = 0; i < sizeofArray-1; i++) {
         minimum_index = i;
-        for (int j = i + 1; j < sizeofArray; j++){
-            if (array[j] < array[minimum_index]){
+        for (int j = i + 1; j < sizeofArray; j++) {
+            if (array[j] < array[minimum_index]) {
                 minimum_index = j; 
             }
         }
@@ -20,8 +20,8 @@ void selectionSort(int array[], int sizeofArray){
     }
 }
   
-void printArray(int array[], int size){
-    for (int i = 0; i < size; i++){
+void printArray(int array[], int size) {
+    for (int i = 0; i < size; i++) {
         cout << "array["<<i<<"] = " << array[i]<< endl;
     }
 }
